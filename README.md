@@ -16,10 +16,10 @@ JavaScript: Implementing dynamic functionality, handling API requests, and updat
 
 ## How to Use:
 
-Clone the repository to your local machine.
-Open the index.html file in your web browser.
-Enter the desired location or choose from the extensive city list to get instant weather updates!
-Feel free to explore the codebase, suggest improvements, or contribute to making it even better. Your feedback is highly appreciated! ⚡
+Clone the repository to your local machine.<br>
+Open the index.html file in your web browser.<br>
+Enter the desired location or choose from the extensive city list to get instant weather updates!<br>
+Feel free to explore the codebase, suggest improvements, or contribute to making it even better. Your feedback is highly appreciated! ⚡<br>
 
 #### API Used: Rapid API
 
