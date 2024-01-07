@@ -10,9 +10,9 @@ City Search: Queries a dataset of cities around the world, giving users the flex
 
 ## Tech Stack:
 
-HTML: For structuring the content and layout.
-CSS: Styling the user interface, making it visually appealing.
-JavaScript: Implementing dynamic functionality, handling API requests, and updating the UI.
+HTML: For structuring the content and layout.<br>
+CSS: Styling the user interface, making it visually appealing.<br>
+JavaScript: Implementing dynamic functionality, handling API requests, and updating the UI.<br>
 
 ## How to Use:
 
@@ -21,6 +21,6 @@ Open the index.html file in your web browser.
 Enter the desired location or choose from the extensive city list to get instant weather updates!
 Feel free to explore the codebase, suggest improvements, or contribute to making it even better. Your feedback is highly appreciated! ⚡
 
-## API Used: Rapid API
+#### API Used: Rapid API
 
 Let's make checking the weather for any city around the world a breeze! ☀️❄️🌧️
