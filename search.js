@@ -26,6 +26,10 @@ searchInput.addEventListener('keyup',(e)=>{
 	}
 });
 
+resultWrapper.addEventListener('click',()=>{
+	searchWrapper.classList.remove('show');
+})
+
 
 function renderResults(result){
 

@@ -1,31 +1,154 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    width: 100vw;height: 100vh;
+
+
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 24%, rgba(9,9,121,1) 51%, rgba(0,212,255,1) 81%); */
+    background: url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity:0.95;
 }
 
-h2 {
-    background-color: #3498db;
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#main-heading{
     color: #fff;
-    padding: 10px;
+    text-align: center;
 }
 
 p {
+    color:#fff;
     font-size: 18px;
 }
 
-.wrapper{    
-    margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: 0px 1px Spx 3px rgba(0,0,0,0.15);
-    position: relative;
-    width: 80%;
+/* Search Area */
+
+.form {
+  --input-text-color: #fff;
+  --input-bg-color: #283542;
+  --focus-input-bg-color: transparent;
+  --text-color: #949faa;
+  --active-color: #1b9bee;
+  --width-of-input: 200px;
+  --inline-padding-of-input: 1.2em;
+  --gap: 0.9rem;
 }
+.container{
+    width:50vw;
+}
+.form {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin:1px auto;
+  position: relative;
+  isolation: isolate;
+}
+.fancy-bg {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: #283542;
+  border-radius: 30px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+label {
+  width: 100%;
+  padding: 0.8em;
+  height: 40px;
+  padding-inline: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.search,.close-btn {
+  position: absolute;
+}
+.search {
+  fill: #949faa;
+  left: 1.2em;
+  cursor: pointer;
+}
+svg {
+  width: 17px;
+  display: block;
+}
+  
+.close-btn {
+  border: none;
+  right: 1.2em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #1b9bee;
+  opacity: 0;
+  visibility: hidden;
+}
+  
+.input {
+  color: #fff;
+  width: 100%;
+  margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
+  background: none;
+  border: none;
+}
+  
+.input:focus {
+  outline: none;
+}
+  
+.input::placeholder {
+  color: var(--text-color);
+}
+
+.input:focus ~ .fancy-bg {
+  border: 1px solid var(--active-color);
+  background: var(--focus-input-bg-color);
+}
+  
+.input:focus ~ .search {
+  fill: var(--active-color);
+}
+
+.input:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}
+
+/* Search Suggestions */
 
 .results {
     padding: 0px;
+    width: 48vw;
+    margin:0px auto;
+    cursor: pointer;
+
+    opacity: 0.96;
+    z-index: 999;
 }
 
 .results ul{
@@ -33,10 +156,12 @@ p {
 }
 
 .results ul li{
-    background-color: #fff;
+    background-color: #42586e;
+    color:whitesmoke;
     list-style: none;
-    border-radius: 3px;
+    border-radius: 10px;
     opacity: 0;
+    border: 1px solid black;
     display: none;
     padding: 8px 12px;
     transition: all .5s linear;
@@ -44,49 +169,40 @@ p {
 
 .show .results ul li{
     opacity: 1;
-    display: block;
+    display:block;
 }
-
-/* .show .results {
- padding: 10px;
-} */
 
 .results ul li:hover{
-    background-color: #ececec;
+    background-color: #779abd;
 }
 
-input[type="search"] {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    /* margin: 10px 0; */
+/* Weather Table */
 
+/* Add glassmorphism to table as shown in image(see bookmark) */
+
+.content{
+    position: absolute;
+    top:30%;
+    left:10%;
+    z-index: -1;
 }
 
-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-table {
-    border-collapse: collapse;
-    width: 80%;
+.table {
+    width: 80vw;
+    text-align: center;
     margin: 20px auto;
+
+    background: rgba(89,140,167,0.45);
+    -webkit-backdrop-filter: blur(28px);
+    backdrop-filter: blur(28px);
+    border: 1px solid rgba(89,140,167,0.225);
 }
 
 table, th, td {
     border: 1px solid #ccc;
+    color:#fff;
 }
 
-th, td {
-    padding: 10px;
-}
-
-th {
-    background-color: #3498db;
-    color: #fff;
+#new_design{
+    color:whitesmoke;
 }
