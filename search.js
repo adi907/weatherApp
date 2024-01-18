@@ -7,7 +7,7 @@ const resultWrapper=document.querySelector('.results');
 
 
 searchInput.addEventListener('keyup',(e)=>{
-	console.log(e.target.value);
+	// console.log(e.target.value);
 	// or just simply searchInput.value
 	// console.log(searchInput.value);
 	
@@ -51,7 +51,7 @@ function renderResults(result){
 		result.addEventListener('click',()=>{
 			const content=result.textContent;
 			searchInput.value=content;
-			console.log(content);
+			// console.log(content);
 	
 		});
 	});

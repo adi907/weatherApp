@@ -159,8 +159,6 @@ async function displayWeather(){
 
 }
 
-setInterval(displayWeather,3000);
-
 const reset_text=document.getElementById('reset-text');
 reset_text.addEventListener('click',()=>{
     document.getElementById('loc').value='';
@@ -172,7 +170,7 @@ search_button.addEventListener('click',()=>{
 })
 
 /* To Do
- Make a feature to update weather every 45 seconds 
+ Make a feature to update weather every 60 seconds 
  Set Background acc to weather
 document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
 */
