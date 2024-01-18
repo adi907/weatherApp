@@ -1,5 +1,6 @@
 # Weather App 🌦️ 
 
+## Website link: https://adi907.github.io/weatherApp/
 Welcome to my Weather App project! This web application provides real-time weather information based on user-selected locations. One standout feature is the extensive city dataset, allowing users to search and select from a comprehensive list of cities globally. I've designed and implemented this app using HTML, CSS, and JavaScript, with weather data fetched from the Rapid API.
 
 ## Key Features:
