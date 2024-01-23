@@ -49,8 +49,6 @@ async function displayWeather(){
             const formattedTime = `${hours}:${minutes} ${ampm}`;
 
             const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'];
-            const currentDay = daysOfWeek[(dateTime.getDay()-1)%7];
-            const d1 = daysOfWeek[(dateTime.getDay())%7];
             const d2 = daysOfWeek[(dateTime.getDay()+1)%7];
 
 
@@ -105,7 +103,7 @@ async function displayWeather(){
                     
                         <div class="col">
                             <div class="row">
-                                <p>${currentDay}</p>
+                                <p>Today</p>
                             </div>
                             <div class="row">
                                 <img src="${result.forecast.forecastday[0].day.condition.icon}">
@@ -119,7 +117,7 @@ async function displayWeather(){
 
                         <div class="col">
                             <div class="row">
-                                <p>${d1}</p>
+                                <p>Tomorrow</p>
                             </div>
                             <div class="row">
                                 <img src="${result.forecast.forecastday[1].day.condition.icon}">
